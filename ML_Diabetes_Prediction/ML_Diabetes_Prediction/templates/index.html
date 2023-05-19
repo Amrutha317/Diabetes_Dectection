@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diabetes Detection</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url("https://images.pexels.com/photos/6942015/pexels-photo-6942015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-repeat:no-repeat;
+        background-size:cover;
+        margin: 0;
+        padding: 0;
+      }
+
+      #banner {
+        color:black;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+
+      #content {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      #footer {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      input[type=submit]{
+        background-color:orange;
+        border:2px;
+        color:white;
+        padding:16px 32px;
+        cursor:pointer;
+        margin-top:15px;
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="banner">
+      <h1>Diabetes Detection</h1>
+    </div>
+
+    <div id="content">
+      <h2>Welcome to my Diabetes Detection Page!</h2>
+      <p>
+        Goal: The objective is to predict based on diagnostic measurements
+        whether a patient has diabetes.
+        <br />
+        Several constraints were placed on the selection of these instances from
+        a larger database. 
+      </p>
+
+      <p>This Prediction is mainly based on:</p>
+      <li>Pregnancies: Number of times pregnant</li>
+      <li>
+        Glucose: Plasma glucose concentration a 2 hours in an oral glucose
+        tolerance test
+      </li>
+      <li>BloodPressure: Diastolic blood pressure (mm Hg)</li>
+      <li>SkinThickness: Triceps skin fold thickness (mm)</li>
+      <li>Insulin: 2-Hour serum insulin (mu U/ml)</li>
+      <li>BMI: Body mass index (weight in kg/(height in m)^2)</li>
+      <li>Diabetes Pedigree Function: Diabetes pedigree function</li>
+      <li>Age: Age (years)</li>
+      <li>Outcome: Class variable (0 or1)</li>
+
+      <div align='center'>
+        <form action = "check">
+          <input type ="submit" value="Let's Predict">
+        </div>
+    </div>
+    
+    <div id="footer">&copy; 2023 Diabetes Detection. All rights reserved.</div>
+  </body>
+</html>

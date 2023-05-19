@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Contact Us Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+  <script>function validateform(){
+
+    var Pregnancies=document.form1.Pregnancies.value;
+    var Glucose=document.form1.Glucose.value;
+    var BloodPressure=document.form1.BloodPressure.value;
+    var SkinThickness=document.form1.SkinThickness.value;
+    var Insulin=document.form1.Insulin.value;
+    var BMI=document.form1.BMI.value;
+    var DiabetesPedigreeFunction=document.form1.DiabetesPedigreeFunction.value;
+    var Age=document.form1.Age.value;
+    
+    if (Pregnancies==null || Pregnancies==""){
+      alert("Pregnancies can't be blank");
+      return false;
+    }else if (Glucose==null || Glucose==""){
+      alert("Glucose can't be blank");
+      return false;
+      }
+      else if (BloodPressure==null || BloodPressure==""){
+      alert("BloodPressure can't be blank");
+      return false;
+      }
+      else if (SkinThickness==null || SkinThickness==""){
+      alert("SkinThickness can't be blank");
+      return false;
+      }
+      else if (Insulin==null || Insulin==""){
+      alert("Insulin can't be blank");
+      return false;
+      }  else if (BMI==null || BMI==""){
+      alert("BMI can't be blank");
+      return false;
+      }
+      else if (DiabetesPedigreeFunction==null || DiabetesPedigreeFunction==""){
+      alert("DiabetesPedigreeFunction can't be blank");
+      return false;
+      }
+       else (Age==null || Age==""){
+      alert("Age can't be blank");
+      return false;
+      }
+    }  </script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+    
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Ubuntu', sans-serif;
+      }
+      body {
+        background-image: url("https://images.pexels.com/photos/6942015/pexels-photo-6942015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-repeat:no-repeat;
+        background-size:cover;
+      }
+    
+      .btn{
+        background-color:orange;
+            border:2px;
+            color:white;
+            padding:16px 32px;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius: 25px;
+            text-align: center;
+      }
+    
+      .contact-us {
+        width: 300px;
+        background: #ffffff;
+        padding: 50px;
+        margin: 100px auto;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    
+      .title h1 {
+        color: orange;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+    
+      .form .form-items {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+    
+      .form .input {
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        background: #ebeef1;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+      }
+    
+      .form .btn {
+        background: #0080ff;
+        text-align: center;
+        color: #fff;
+        padding: 12px;
+        border-radius: 25px;
+        cursor: pointer;
+      }
+    
+    
+      
+    </style>
+</head>
+
+<body>
+ 
+  <div class="contact-us">
+    <div class="title">
+      <h1>Diabetes Dectection</h1>
+    </div>
+    
+    <center>
+      <h2><b>Result:</b></h2><h2 style="color: red"><b>{{ result }}</b></h2>
+    </center>
+
+    <br>
+
+    <div class="form">
+  		<form id="form1" name="form1" method="post", action="/diabetes/" onsubmit=" return validateform()" >
+        <h3>Please enter the information required:</h3>
+
+    <br>
+  		<div class="form-items">
+        <input type="text" class="input" name="Glucose" id="Glucose" placeholder="Glucose">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="BloodPressure" id="BloodPressure" placeholder="Blood Pressure">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="SkinThickness" id="SkinThickness" placeholder="Skin Thickness">
+      </div>
+      <div class="form-items">
+        <input type="text" class="input" name="Pregnancies" id="Pregnancies" placeholder="No. of Pregnancies">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="Insulin" id="Insulin" placeholder="Insulin">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="BMI" id="BMI" placeholder="BMI">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="Age" id="Age" placeholder="Age">
+      </div>
+
+
+    </div>
+<div align="center">
+    <button type="submit" form="form1" value="Submit" class="btn">Submit<i class="fas fa-arrow-right">      </i>
+</button>
+
+    <button  type="reset" form="form1" value="reset" class="btn">Clear<i class="fas fa-arrow-right">     </i>
+</button>
+</div>
+
+
+	{% block content %}
+    {% endblock %}
+
+
+
+</body>
+</html>
