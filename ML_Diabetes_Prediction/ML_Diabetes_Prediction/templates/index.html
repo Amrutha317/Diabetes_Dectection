@@ -6,14 +6,14 @@
       body {
         font-family: Arial, sans-serif;
         background-image: url("https://images.pexels.com/photos/6942015/pexels-photo-6942015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-        background-repeat:no-repeat;
-        background-size:cover;
+        background-repeat: no-repeat;
+        background-size: cover;
         margin: 0;
         padding: 0;
       }
 
       #banner {
-        color:black;
+        color: black;
         padding: 20px;
         text-align: center;
       }
@@ -43,14 +43,36 @@
         font-size: 14px;
       }
 
-      input[type=submit]{
-        background-color:orange;
-        border:2px;
-        color:white;
-        padding:16px 32px;
-        cursor:pointer;
-        margin-top:15px;
+      input[type="submit"] {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        cursor: pointer;
+        margin-top: 15px;
         border-radius: 25px;
+      }
+
+      .center-align {
+        text-align: center;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: orange;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -66,29 +88,59 @@
         whether a patient has diabetes.
         <br />
         Several constraints were placed on the selection of these instances from
-        a larger database. 
+        a larger database.
       </p>
 
       <p>This Prediction is mainly based on:</p>
-      <li>Pregnancies: Number of times pregnant</li>
-      <li>
-        Glucose: Plasma glucose concentration a 2 hours in an oral glucose
-        tolerance test
-      </li>
-      <li>BloodPressure: Diastolic blood pressure (mm Hg)</li>
-      <li>SkinThickness: Triceps skin fold thickness (mm)</li>
-      <li>Insulin: 2-Hour serum insulin (mu U/ml)</li>
-      <li>BMI: Body mass index (weight in kg/(height in m)^2)</li>
-      <li>Diabetes Pedigree Function: Diabetes pedigree function</li>
-      <li>Age: Age (years)</li>
-      <li>Outcome: Class variable (0 or1)</li>
+      <table>
+        <tr>
+          <th>Feature</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Pregnancies</td>
+          <td>Number of times pregnant</td>
+        </tr>
+        <tr>
+          <td>Glucose</td>
+          <td>
+            Plasma glucose concentration 2 hours in an oral glucose tolerance
+            test
+          </td>
+        </tr>
+        <tr>
+          <td>BloodPressure</td>
+          <td>Diastolic blood pressure (mm Hg)</td>
+        </tr>
+        <tr>
+          <td>SkinThickness</td>
+          <td>Triceps skin fold thickness (mm)</td>
+        </tr>
+        <tr>
+          <td>Insulin</td>
+          <td>2-Hour serum insulin (mu U/ml)</td>
+        </tr>
+        <tr>
+          <td>BMI</td>
+          <td>Body mass index (weight in kg/(height in m)^2)</td>
+        </tr>
+        <tr>
+          <td>Diabetes Pedigree Function</td>
+          <td>Diabetes pedigree function</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>Age (years)</td>
+        </tr>
+      </table>
 
-      <div align='center'>
-        <form action = "check">
-          <input type ="submit" value="Let's Predict">
-        </div>
+      <div class="center-align">
+        <form action="check">
+          <input type="submit" value="Let's Predict" />
+        </form>
+      </div>
     </div>
-    
+
     <div id="footer">&copy; 2023 Diabetes Detection. All rights reserved.</div>
   </body>
 </html>
